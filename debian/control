@@ -1,15 +1,17 @@
 Source: vyatta-mibs-misc
-Section: contrib/net
+Section: net
 Priority: optional
-Maintainer: Vyatta Package Maintainers <DL-vyatta-help@att.com>
-Build-Depends:
- debhelper (>= 9),
- smitools,
-Standards-Version: 3.9.5
+Maintainer: NuDanOS Maintainers <jon@fernandez.tech>
+Build-Depends: debhelper-compat (= 13),
+ smitools
+Standards-Version: 4.7.2
+Rules-Requires-Root: no
+Vcs-Git: https://github.com/nudanos/vyatta-mibs-misc.git
+Vcs-Browser: https://github.com/nudanos/vyatta-mibs-misc
 
 Package: vyatta-snmp-mibs-misc
 Architecture: all
-Depends:
+Depends: 
  ${misc:Depends}
 Description: Miscellaneous Brocade MIBs
  SNMP MIBs added by vRouter
@@ -18,7 +20,7 @@ Replaces: libsnmp-base (<< 5.7.2.1+dfsg-1+vyatta4)
 
 Package: vyatta-mibs-misc
 Architecture: all
-Depends:
+Depends: 
  ${misc:Depends}, vyatta-snmp-mibs-misc
 Description: Miscellaneous Brocade MIBs
  Brocade and SNMP MIBs added by vRouter
